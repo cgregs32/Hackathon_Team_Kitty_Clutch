@@ -26,7 +26,7 @@ class BioForm extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
             <Form.Input
-              label="Name"
+              label="name"
               required
               value={this.state.name}
               onChange={this.handleChange}

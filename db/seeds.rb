@@ -1,7 +1,7 @@
 5.times do
  Post.create(
    user_id: 1,
-   title: Faker::Lorem.sentence,
+   title: Faker::Kpop.boy_bands,
    body: Faker::Lorem.paragraph
  )
 end

@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Segment, Button } from 'semantic-ui-react'
+import { Segment, Button, Divider } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {getPosts} from '../actions/posts'
 
@@ -14,13 +14,16 @@ class PostList extends React.Component {
     const {id} = this.props
     return this.props.posts.map(post => {
       return(
-        <Segment.Group key={id}>
-          <Segment>{post.title}</Segment>
-          <Segment.Group>
-            <Segment>{post.body}</Segment>
+        <div>
+          <Segment.Group key={id}>
+            <Segment>{post.title}</Segment>
+            <Segment.Group>
+              <Segment>{post.body}</Segment>
+            </Segment.Group>
+            <Link to={`/post/${post.id}`}>Blog Info</Link>
           </Segment.Group>
-          <Link to={`/post/${post.id}`}>Blog Info</Link>
-        </Segment.Group>
+          <Divider section/>
+        </div>
       )
     })
   }
