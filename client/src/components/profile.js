@@ -2,6 +2,8 @@ import React from 'react'
 import PostList from './PostList'
 import PostForm from './PostForm'
 import {Grid} from 'semantic-ui-react'
+import BioForm from './BioForm';
+
 
 const Profile = (props) => {
   return (
@@ -14,7 +16,7 @@ const Profile = (props) => {
             <h1>Posts</h1>
             <PostForm/>
             <PostList />
-
+            <BioForm />
           </Grid.Column>
 
         </Grid.Row>

@@ -22,7 +22,8 @@ class BioForm extends React.Component {
   render() {
     return (
       <Grid>
-      <Grid.Column width={6}>
+        <Header as="h2" textAlign="center">Create a Bio</Header>
+      <Grid.Column width={12}>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
             <Form.Input
@@ -31,6 +32,26 @@ class BioForm extends React.Component {
               value={this.state.name}
               onChange={this.handleChange}
               placeholder='Full Name'
+              width={8}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Input
+              label="description"
+              required
+              value={this.state.description}
+              onChange={this.handleChange}
+              placeholder='Description'
+              width={8}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Input
+              label="location"
+              required
+              value={this.state.location}
+              onChange={this.handleChange}
+              placeholder='Location'
               width={8}
             />
           </Form.Group>

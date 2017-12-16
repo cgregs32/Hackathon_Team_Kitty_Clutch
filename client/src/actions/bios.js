@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {setHeaders} from './headers'
+
 export const addBio = (bio) => {
   return(dispatch) => {
     axios.post('/api/bio', bio)
