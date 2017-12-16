@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Api::PostsController < ApplicationController
   before_action :set_post, except: [:index, :create]
    before_action :authenticate_user!
 
@@ -36,5 +36,5 @@ class PostsController < ApplicationController
 
      def post_params
        params.require(:post).permit(:title, :body)
-     end
+     end  
 end
