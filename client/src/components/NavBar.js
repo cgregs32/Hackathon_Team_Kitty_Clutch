@@ -40,6 +40,9 @@ class NavBar extends Component {
           <Link to='/profile'>
             <Menu.Item name='Profile' />
           </Link>
+          <Link to='/users'>
+            <Menu.Item name='FuzzyFriends' />
+          </Link>
           { this.rightNavs() }
         </Menu>
       </div>

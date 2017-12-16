@@ -10,6 +10,7 @@ import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './profile'
+import UserPage from './UsersPage'
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <ProtectedRoute exact path='/profile' component={Profile} />
+            <ProtectedRoute exact path='/users' component={UserPage} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <Route component={NoMatch} />

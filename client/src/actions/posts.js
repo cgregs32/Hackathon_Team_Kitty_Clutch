@@ -8,7 +8,8 @@ export const getPosts = () => {
 export const addPost = (post) => {
   return (dispatch) => {
     axios.post('/api/posts', { post } )
-      .then( res => dispatch({ type: 'ADD_POST', post: res.data }) )
+      .then( ({data, headers}) => {
+        dispatch({ type: 'ADD_POST', post: data, headers }) })
   }
 }
 export const updatePost = (post) => {

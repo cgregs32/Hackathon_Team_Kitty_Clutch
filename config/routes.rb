@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :bio
     # resources :comments
     resources :posts
+    resources :users
 
   end
 
