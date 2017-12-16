@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {getUsers} from '../actions/users'
-import {Segment, List, Button, Image} from 'semantic-ui-react'
+import {Segment, List, Button, Image, Grid} from 'semantic-ui-react'
 
 class UserList extends React.Component {
 
@@ -13,15 +13,13 @@ class UserList extends React.Component {
   renderUsers = () => {
     return this.props.users.map(user => {
       return (
+    <Grid width={4}>
         <Segment>
           <List.Item>
             {user.name}
           </List.Item>
           <List.Item>
             {user.nickname}
-          </List.Item>
-          <List.Item>
-            {user.uid}
           </List.Item>
           <List.Item>
             {user.email}
@@ -31,6 +29,7 @@ class UserList extends React.Component {
           </List.Item>
           <Button primary>Add Friend</Button>
         </Segment>
+      </Grid>
       )
     })
   }
