@@ -30,7 +30,7 @@ class BioForm extends React.Component {
               required
               value={this.state.name}
               onChange={this.handleChange}
-              placeholder='Name'
+              placeholder='Full Name'
               width={8}
             />
           </Form.Group>
