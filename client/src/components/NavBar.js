@@ -3,7 +3,7 @@ import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
-import kitty from '../images/kitty.jpg';
+import smallkitty from '../images/smallkitty.jpg';
 
 class NavBar extends Component {
   rightNavs = () => {
@@ -37,10 +37,13 @@ class NavBar extends Component {
         <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item />
-            <Image src={kitty} size="small" />
+            <Image src={smallkitty} size="tiny" />
           </Link>
           <Link to='/profile'>
             <Menu.Item name='Profile' />
+          </Link>
+          <Link to='/whispurrs'>
+            <Menu.Item name='Whispurrs' />
           </Link>
           <Link to='/users'>
             <Menu.Item name='FuzzyFriends' />

@@ -6,10 +6,9 @@ import {Segment} from 'semantic-ui-react'
 class Home extends Component {
   render() {
     return (
-      <Segment>
-        <Header as='h1' textAlign='center'>Home Component</Header>
-        <BioForm />
-      </Segment>
+      <div>
+        <Header as='h1' textAlign='center'>Careless Whispurrs</Header>
+      </div>
     );
   }
 }
