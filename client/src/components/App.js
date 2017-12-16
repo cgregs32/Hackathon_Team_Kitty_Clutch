@@ -11,23 +11,26 @@ import FetchUser from './FetchUser';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './profile'
 import UserPage from './UsersPage'
+import '../styles/blah.css'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Flash />
-        <FetchUser>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <ProtectedRoute exact path='/profile' component={Profile} />
-            <ProtectedRoute exact path='/users' component={UserPage} />
-            <AuthRoute exact path='/login' component={Login} />
-            <AuthRoute exact path='/register' component={Register} />
-            <Route component={NoMatch} />
-          </Switch>
-        </FetchUser>
+      <NavBar />
+      <div className="everythingWrap">
+      <Flash />
+      <FetchUser>
+      <Switch>
+      <Route exact path='/' component={Home} />
+      <ProtectedRoute exact path='/profile' component={Profile} />
+      <ProtectedRoute exact path='/users' component={UserPage} />
+      <AuthRoute exact path='/login' component={Login} />
+      <AuthRoute exact path='/register' component={Register} />
+      <Route component={NoMatch} />
+      </Switch>
+      </FetchUser>
+      </div>
       </div>
     );
   }

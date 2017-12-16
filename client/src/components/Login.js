@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Segment, Form, Button } from 'semantic-ui-react';
+import { Header, Segment, Form, Button, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { handleLogin } from '../actions/auth';
 
@@ -22,7 +22,7 @@ class Login extends Component {
     const { email, password } = this.state;
     return (
       <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+        <Header as='h1' textAlign='center'>Login To Your Litter Box!</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label htmlFor='email'>Email</label>
@@ -46,7 +46,10 @@ class Login extends Component {
             />
           </Form.Field>
           <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
+            <Button primary type='submit'><Icon name='paw' /></Button>
+          </Segment>
+          <Segment textAlign='center' basic>
+            <Button primary href='./Register'>Create a Paw-some Account</Button>
           </Segment>
         </Form>
       </Segment>
